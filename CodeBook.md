@@ -12,7 +12,7 @@ The script run_analysis.R performs the following actions on the raw data set to 
 * Reads the activity mapping and merges the activity labels by the activitnr to the table.
 * Deletes activitynr.
 * Groups the table by subject and activity and calculates the mean of the feature columns.
-* Outputs result.txt with the date in the following format:
+* Outputs result.txt with the data in the following format:
 
 Description of the variables in result.txt
 ------------------------------------------
