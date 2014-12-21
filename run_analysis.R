@@ -35,10 +35,15 @@ data_y <- read.csv(paste(dir, "test/y_test.txt", sep="/"), sep="", header=FALSE)
 data_x <- rbind(data_x, read.csv(paste(dir, "train/X_train.txt", sep="/"), sep="", header=FALSE, colClasses=cols))
 data_y <- rbind(data_y, read.csv(paste(dir, "train/y_train.txt", sep="/"), sep="", header=FALSE))
 
-# read and set column labels (features)
+# read, fix and set column labels (features)
 feats <- read.csv(paste(dir, "features.txt", sep="/"),
                   sep="", header=FALSE, colClasses=c("NULL","character"))
-names(data_x) <- feats[cols_labels,1]
+features_fixed <- gsub("\\(\\)", "",feats[cols_labels,1])
+features_fixed <- gsub("-", "_", features_fixed)
+features_fixed <- gsub("BodyBody", "Body", features_fixed)
+features_fixed <- gsub("^t", "Time", features_fixed)
+features_fixed <- gsub("^f", "Frequency", features_fixed)
+names(data_x) <- features_fixed
 names(data_y) <- "activitynr"
 
 # merge subjects, data_x and data_y
