@@ -54,8 +54,6 @@ data$activitynr <- NULL
 result <- data %>%
     group_by(subject,activity) %>%
     summarise_each(funs(mean)) 
-#    %>%
-#    arrange(subject, activity) 
 
 # write result to file result.txt
 write.table(result, "result.txt", row.name=FALSE)
