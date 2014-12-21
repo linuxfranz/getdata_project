@@ -14,11 +14,13 @@ The script run_analysis.R performs the following actions on the raw data set to 
 * Groups the table by subject and activity and calculates the mean of the feature columns.
 * Outputs result.txt with the date in the following format:
 
+Description of the variables in result.txt
+------------------------------------------
+
 * subject            -> subject nr (1-30)
 * activity           -> activities carried out by subjects (LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS)
 
-The rest of the columns are the means of the feature variables from raw data grouped by subject and activity:
--------------------------------------------------------------------------------------------------------------
+The rest of the columns are the means of the feature variables from the raw data grouped by subject and activity:
 
 * TimeBodyAccMeanX
 * TimeBodyAccMeanY
