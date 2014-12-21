@@ -5,9 +5,9 @@ This project contains an R script called <code>run_analysis.R</code> that downlo
 
 The script depends on the R package <code>dplyr</code> being installed. It can be installed with <code>install.packages("dplyr")</code> in R, if it is not already installed.
 
-Please note that you need an internet connection if you don't have the source dataset available locally. The script will download an extract the raw data in the working directory. If <code>Dataset.zip</code> exists it will not be downloaded again. If the directory <code>UCI HAR Dataset</code> doesn't exist the zip file will be extracted.
+Please note that you need an internet connection if you don't have the source dataset available locally. The script will download and extract the raw data from the website into the working directory. If <code>Dataset.zip</code> exists it will not be downloaded again. If the directory <code>UCI HAR Dataset</code> doesn't exist the zip file will be extracted.
 
-To run this script after cloning this repository:
+To run this script after cloning the repository:
 
 * cd into the directory <code>getdata_project</code>.
 * Start R.
